@@ -25,9 +25,14 @@ app.get("/", (req, res) => {
 // Interpolation Syntax- EJS Tags :
 
 app.get("/rolldice", (req, res) => {
-
-  let diceVal = Math.floor(Math.random() *6)+1 ;
+  let diceVal = Math.floor(Math.random() * 6) + 1;
   res.render("rollDice.ejs", { num: diceVal }); // diceVal value stored in num an that accept in rollDice.ejs file.
 });
 
+// use of conditional statements in EJS :
 
+app.get("/ig/:username", (req, res) => {
+  let followers = ["shiv", "nik", "deep", "Payal"];
+  let { username } = req.params;
+  res.render("insta.ejs", { username, followers });
+});
