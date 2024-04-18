@@ -1,5 +1,4 @@
 // EJS
-
 const express = require("express");
 const app = express();
 
@@ -36,3 +35,4 @@ app.get("/ig/:username", (req, res) => {
   let { username } = req.params;
   res.render("insta.ejs", { username, followers });
 });
+
