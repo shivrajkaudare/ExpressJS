@@ -28,11 +28,27 @@ app.get("/rolldice", (req, res) => {
   res.render("rollDice.ejs", { num: diceVal }); // diceVal value stored in num an that accept in rollDice.ejs file.
 });
 
-// use of conditional statements in EJS :
+// // use of conditional statements in EJS :
+
+// app.get("/ig/:username", (req, res) => {
+//   let followers = ["shiv", "nik", "deep", "Payal"];
+//   let { username } = req.params;
+//   res.render("insta.ejs", { username, followers });
+// });
+
+/***********************************************************************************/
+
+
+// instagram page using EJS :
 
 app.get("/ig/:username", (req, res) => {
-  let followers = ["shiv", "nik", "deep", "Payal"];
+  const instaData = require("./data.json");
   let { username } = req.params;
-  res.render("insta.ejs", { username, followers });
-});
+  const data = instaData[username];
+  if (data) {
+    res.render("insta.ejs", { data });
+  } else {
+    res.render("error.ejs");
+  }
 
+});
