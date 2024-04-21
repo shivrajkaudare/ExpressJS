@@ -28,13 +28,6 @@ app.get("/rolldice", (req, res) => {
   res.render("rollDice.ejs", { num: diceVal }); // diceVal value stored in num an that accept in rollDice.ejs file.
 });
 
-// // use of conditional statements in EJS :
-
-// app.get("/ig/:username", (req, res) => {
-//   let followers = ["shiv", "nik", "deep", "Payal"];
-//   let { username } = req.params;
-//   res.render("insta.ejs", { username, followers });
-// });
 
 /***********************************************************************************/
 
