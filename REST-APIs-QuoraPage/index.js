@@ -96,6 +96,6 @@ app.get("/posts/:id/edit", (req, res) => {
 
 app.patch("/posts/:id/delete", (req, res) => {
   let { id } = req.params;
-  let post = posts.find((p) => id === p.id);
-  res.send("deleted");
+  posts = posts.filter((p) => id !== p.id);
+  res.redirect("/posts");
 });
