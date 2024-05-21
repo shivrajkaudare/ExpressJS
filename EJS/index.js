@@ -5,9 +5,8 @@ const { request } = require("http");
 const app = express();
 
 const path = require("path");
-
+// Creating Port
 const port = 8080;
-
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
