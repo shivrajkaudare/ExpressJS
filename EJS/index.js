@@ -5,15 +5,15 @@ const { request } = require("http");
 const app = express();
 
 const path = require("path");
-
+// Creating Port
 const port = 8080;
-
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
 // for accesing static file folder "public"
 // app.use(express.static("public"));
+
 app.use(express.static(path.join(__dirname, "public/css")));
 app.use(express.static(path.join(__dirname, "public/javascript")));
 // template engine
