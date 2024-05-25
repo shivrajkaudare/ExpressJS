@@ -13,6 +13,7 @@ app.listen(port, () => {
 
 // for accesing static file folder "public"
 // app.use(express.static("public"));
+
 app.use(express.static(path.join(__dirname, "public/css")));
 app.use(express.static(path.join(__dirname, "public/javascript")));
 // template engine
