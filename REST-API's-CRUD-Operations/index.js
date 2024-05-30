@@ -10,6 +10,7 @@ app.listen(port, () => {
   console.log(`server listening on port ${port}`);
 });
 
+// path require
 const path = require("path");
 app.set("view engine", "ejs");
 
