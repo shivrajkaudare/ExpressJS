@@ -1,7 +1,7 @@
 
 Tags :-
 
-<%    'Scriptlet' tag, for control-flow, no output
+1) <%    'Scriptlet' tag, for control-flow, no output <br>
 <%_   ‘Whitespace Slurping’ Scriptlet tag, strips all whitespace before it
 <%=   Outputs the value into the template (HTML escaped)
 <%-   Outputs the unescaped value into the template
