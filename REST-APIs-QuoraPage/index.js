@@ -18,7 +18,7 @@ app.set("views", path.join(__dirname, "views"));
 // accesing static file from directory public
 app.use(express.static(path.join(__dirname, "public")));
 
-// parse the data send by POST we use middleware.
+// middleware which parse the data send by POST method.
 app.use(express.urlencoded({ extended: true }));
 
 // creating port
