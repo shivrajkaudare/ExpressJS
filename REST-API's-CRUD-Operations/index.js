@@ -10,14 +10,12 @@ app.listen(port, () => {
   console.log(`server listening on port ${port}`);
 });
 
-// path require
+// path package require
 const path = require("path");
-// view folder
-app.set("view engine", "ejs");
-
 app.set("views", path.join(__dirname, "/views"));
 app.use(express.static(path.join(__dirname, "public")));
 
+app.set("view engine", "ejs");
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
