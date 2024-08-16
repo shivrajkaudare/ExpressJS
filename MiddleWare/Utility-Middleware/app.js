@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-// logger (middleware that log the information ex . morgen )
+// logger (middleware that log the information ex . morgan )
 app.use((req, res, next) => {
   console.log(req.method, req.hostname, req.path);
   next();
