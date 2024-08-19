@@ -11,6 +11,7 @@ const path = require("path");
 const methodOverride = require("method-override");
 
 app.use(methodOverride("_method"));
+// middleware that parse the Post method data into JSON 
 app.use(express.urlencoded({ extended: true }));
 // ejs
 app.set("view engine", "ejs");
